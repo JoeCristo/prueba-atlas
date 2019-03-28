@@ -1,0 +1,213 @@
+<h3>Usuario <small>{{ user.fullName }}</small></h3>
+
+<hr>
+
+<div *ngIf="statusOK" class="alert alert-success alert-dismissible fade show" role="alert">
+    Se han guardado los datos correctamente.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+<div class="row mb-4">
+    <div class="col-md-12 text-right">
+        <button class="btn btn-sm btn-secondary" [routerLink]="['/users']">Volver</button>
+        <button class="btn btn-sm btn-outline-success ml-2" (click)="addNew(form)">
+                Nuevo
+        </button>
+    </div>
+</div>
+
+
+<div class="row animated fadeIn fast">
+
+    <div class="col-md-12">
+
+
+
+        <form (ngSubmit)="saveUser(form)" #form="ngForm" class="form-group">
+
+
+            <div class="form-group row">
+
+                <label for="fullName" class="col-sm-3 col-form-label">Nombre completo</label>
+
+                <div class="col-lg-8 col-sm-8">
+                    <input [(ngModel)]="user.fullName" #fullName="ngModel" type="text" name="fullName" id="fullName" class="form-control" required minlength="5" />
+
+                    <div *ngIf="fullName.errors && (fullName.dirty || fullName.touched)" class="form-control-feeback">
+                        <div [hidden]="!fullName.errors.required" class="msg-danger-form mt-2">* Campo requerido.</div>
+                        <div [hidden]="!fullName.errors.minlength" class="msg-danger-form mt-2">* Debe contener al menos 5 caracteres.</div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="form-group row">
+
+                <label for="email" class="col-sm-3 col-form-label">Email</label>
+
+                <div class="col-lg-8 col-sm-8">
+                    <input [(ngModel)]="user.email" #email="ngModel" pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,4})+$" type="text" id="email" name="email" class="form-control" required />
+
+                    <div *ngIf="email.errors && (email.dirty || email.touched)" class="form-control-feeback">
+                        <div [hidden]="!email.errors.required" class="msg-danger-form mt-2">* Campo requerido.</div>
+                        <div [hidden]="!email.errors.pattern" class="msg-danger-form mt-2">* Debe ser un email válido.</div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="form-group row">
+
+                <label for="document" class="col-sm-3 col-form-label">Documento de indentidad</label>
+
+                <div class="col-lg-8 col-sm-8">
+                    <input [(ngModel)]="user.document" #document=ngModel pattern="^((\d{8})([A-Z])$)|(^([ABCDEFGHJKLMNPQRSUVW])(\d{7})([0-9A-J])$)" type="text" id="document" name="document" class="form-control" required />
+
+                    <div *ngIf="document.errors && (document.dirty || document.touched)" class="form-control-feeback">
+                        <div [hidden]="!document.errors.required" class="msg-danger-form mt-2">* Campo requerido.</div>
+                        <div [hidden]="!document.errors.pattern" class="msg-danger-form mt-2">* Debe ser DNI, NIE o CIF corretos.</div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="form-group row">
+
+                <label class="form-check-label col-sm-3" for="Newsletter">Newsletter</label>
+
+                <div class="col-lg-8 col-sm-8">
+                    <div class="form-check">
+
+                        <input [(ngModel)]="user.newsletter" name="newsletter" class="form-check-input" type="checkbox" id="Newsletter">
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="form-group row">
+
+                <label for="captation" class="col-sm-3 col-form-label">Captación</label>
+
+                <div class="col-lg-8 col-sm-8">
+                    <select [(ngModel)]="user.captation" #captation="ngModel" name="captation" class="form-control" id="captation" required>
+                    <option value="" selected>Seleccione el tipo</option>
+                    <option value="Telefónica">Telefónica</option>
+                    <option value="Web">Web</option>
+                    <option value="Presencial">Presencial</option>
+
+                </select>
+
+                    <div *ngIf="captation.errors && (captation.dirty || captation.touched)" class="form-control-feeback">
+                        <div [hidden]="!captation.errors.required" class="msg-danger-form mt-2">* Campo requerido.</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="form-group row">
+
+                <label for="address" class="col-sm-3 col-form-label">Dirección</label>
+
+                <div class="col-lg-8 col-sm-8">
+                    <input [(ngModel)]="user.address" type="text" id="address" name="address" class="form-control" />
+                </div>
+
+            </div>
+
+
+
+            <div class="form-group row">
+
+                <label for="CP" class="col-sm-3 col-form-label">Código postal</label>
+
+                <div class="col-lg-8 col-sm-8">
+                    <input [(ngModel)]="user.zipCode" type="text" id="CP" name="zipCode" class="form-control" />
+                </div>
+
+            </div>
+
+
+
+            <div class="form-group row">
+
+                <label for="area" class="col-sm-3 col-form-label">Región</label>
+
+                <div class="col-lg-8 col-sm-8">
+                    <input [(ngModel)]="user.area" type="text" id="area" name="area" class="form-control" />
+                </div>
+
+            </div>
+
+
+
+            <div class="form-group row">
+
+                <label for="city" class="col-sm-3 col-form-label">Ciudad</label>
+
+                <div class="col-lg-8 col-sm-8">
+                    <input [(ngModel)]="user.city" type="text" id="city" name="city" class="form-control" />
+                </div>
+
+            </div>
+
+
+
+
+            <div class="form-group row">
+
+                <label for="country" class="col-sm-3 col-form-label">País</label>
+
+                <div class="col-lg-8 col-sm-8">
+                    <input [(ngModel)]="user.country" type="text" id="country" name="country" class="form-control" />
+                </div>
+
+            </div>
+
+
+
+
+            <div class="form-group row">
+
+                <label for="comments" class="col-sm-3 col-form-label">Comentarios</label>
+
+                <div class="col-lg-8 col-sm-8">
+                    <textarea [(ngModel)]="user.comments" name="comments" class="form-control" id="comments"></textarea>
+                </div>
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label class="col-sm-3 col-form-label"></label>
+
+                <button type="submit" class="btn btn-primary btn-save" [disabled]="!form.form.valid">
+    
+                Guardar
+    
+              </button>
+
+            </div>
+
+
+
+        </form>
+
+
+    </div>
+
+</div>

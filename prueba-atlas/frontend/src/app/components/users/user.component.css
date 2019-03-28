@@ -1,0 +1,17 @@
+.btn-save {
+    margin-left: 0.5em;
+}
+
+.ng-valid[required],
+.ng-valid.required {
+    border-left: 5px solid #42A948;
+}
+
+.ng-valid:not(form) {
+    border-left: 5x solid #a94442;
+}
+
+.msg-danger-form {
+    color: #a94442;
+    font-size: 13px;
+}

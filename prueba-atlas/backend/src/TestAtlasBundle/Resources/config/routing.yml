@@ -1,0 +1,23 @@
+test_atlas_form_new:
+    path:     /users/create
+    defaults: { _controller: TestAtlasBundle:Default:createUser }
+
+test_atlas_form_update:
+    path:     /users/update/{id}
+    defaults: { _controller: TestAtlasBundle:Default:updateUser, id: 0 }
+
+test_atlas_form_get_user:
+    path:     /users/getUser/{id}
+    defaults: { _controller: TestAtlasBundle:Default:getUser, id: 0 }
+
+test_atlas_form_get_users:
+    path:     /users/get/users
+    defaults: { _controller: TestAtlasBundle:Default:getUsers }
+
+test_atlas_form_check_user:
+    path:     /users/checkUser
+    defaults: { _controller: TestAtlasBundle:Default:checkUser }
+
+test_atlas_form_delete_user:
+    path:     /users/deleteUser/{id}
+    defaults: { _controller: TestAtlasBundle:Default:deleteUser, id: 0 }

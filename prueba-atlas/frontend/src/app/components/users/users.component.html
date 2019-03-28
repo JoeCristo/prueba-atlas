@@ -1,0 +1,68 @@
+<h3>Listado de usuarios</h3>
+<hr>
+
+<div class="row">
+    <div class="col-md-12 text-right">
+        <button [routerLink]="['/user', 'new' ]" type="button" class="btn btn-outline-primary" type="button" name="button">
+        Nuevo usuario
+        </button>
+    </div>
+</div>
+
+<br>
+
+<div *ngIf="statusOK" class="alert alert-success alert-dismissible fade show" role="alert">
+    El usuario ha sido eliminado correctamente.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+<div class="row animated fadeIn">
+
+    <div class="col-md-12">
+        <div class="table-responsive">
+
+            <table class="table table-hover">
+
+                <thead class="thead-dark">
+
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Documento</th>
+                        <th scope="col">Captación</th>
+                        <th scope="col">Ciudad</th>
+                        <th scope="col" class="text-right">Acciones</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr *ngFor="let k of users | keys | paginate: {itemsPerPage: 5, currentPage: pageCurrent}; let i = index;">
+                        <td>{{ users[k].fullName }}</td>
+                        <td>{{ users[k].document }}</td>
+                        <td>{{ users[k].captation }}</td>
+                        <td>{{ users[k].city }}</td>
+                        <td class="text-right">
+                            <button [routerLink]="['/user', k]" type="button" class="btn btn-sm btn-outline-warning">
+                                Editar
+                            </button>
+                            <button (click)="deleteUser(k)" type="button" class="btn btn-sm btn-outline-danger ml-1">
+                                Eliminar
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+            <!-- <div>
+                <strong>No hay</strong> registros que mostrar
+            </div> -->
+
+            <pagination-controls (pageChange)="pageCurrent = $event"></pagination-controls>
+
+        </div>
+    </div>
+
+</div>

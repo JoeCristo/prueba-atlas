@@ -1,0 +1,9 @@
+parameters:
+
+  formService.class: TestAtlasBundle\Services\UsersService
+
+services:
+
+  UsersService:
+    class: TestAtlasBundle\Services\UsersService
+    arguments: ["@doctrine"]

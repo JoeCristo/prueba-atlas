@@ -1,0 +1,86 @@
+TestAtlasBundle\Entity\Users:
+    type: entity
+    table: users
+    repositoryClass: TestAtlasBundle\Entity\UsersRepository
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        fullName:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+            column: full_name
+        email:
+            type: string
+            nullable: true
+            length: 60
+            fixed: false
+            comment: ''
+            column: email
+        document:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+            column: document
+        newsletter:
+            type: boolean
+            nullable: true
+            fixed: true
+            comment: ''
+            column: newsletter
+        catchmentType:
+            type: string
+            nullable: true
+            length: 60
+            column: catchment_type
+        address:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+            column: address
+        zipCode:
+            type: integer
+            nullable: true
+            fixed: false
+            comment: ''
+            column: zip_code
+        area:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+            column: area
+        city:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+            column: city
+        country:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+            column: country
+        comments:
+            type: string
+            nullable: true
+            fixed: false
+            comment: ''
+            column: comments
