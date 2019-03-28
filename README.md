@@ -43,7 +43,6 @@ La parte Frontend, por otro lado, me ha hecho sudar. Hay cosas que me hubiera gu
 - El Formulario y las validaciones empecé a hacerlo con los ReactiveFormsModule pero no he conseguido darle el comportamiento que yo quería, cosa que si he logrado (más o menos) de otra manera que me parece un poco menos limpia, en el html. Tambíen lo he dejado para el final y no podía seguir peleándome. No me he quedado muy contento con eso.
 - No he podido controlar por falta de tiempo: a la hora de crear un usuario, cuando se ingresa un email o un documento identificativo que ya existe en la BBDD el programa hace lo que pide el ejercicio, pero al editar un usuario no se puede a no ser que se cambie el Dni o el Email, y creo que esto se debería controlar.
 - Esto último lo pregunto al usuario con un confirm. Me hubiera gustado hacerlo con un modal de bootstrap.
-- Tambíen se podría haber hecho una paginación del listado de usuarios. 
 
 
 Por lo demás estoy contento por lo aprendido y voy seguir haciéndolo, por supuesto!.
