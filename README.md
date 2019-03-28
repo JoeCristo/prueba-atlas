@@ -34,12 +34,12 @@ La parte Backend es donde tengo más experiencía pues es lo que hago en mi actu
 FRONTEND
 ==================
 
-La parte Frontend, por otro lado, me ha hecho sudar. Hay cosas que me hubiera gustado dejar mejor, aunque no se cómo porque estoy más verde.
+La parte Frontend, por otro lado, me ha hecho sudar. Hay cosas que me hubiera gustado dejar mejor, aunque ahora mismo no se cómo porque estoy más verde.
 
 - Angular 7.
 - Bootstrap 4.3.1. Los archivos los he ubicado en la carpeta assets y los he dejado al subir el proyecto.
 - No va la carpeta node_modules.
-- He utilizado una biblioteca para una paginación en el listado de usuarios, instalar con npm install ngx-pagination --save.
+- He utilizado una biblioteca para una paginación en el listado de usuarios (instalar con npm install ngx-pagination --save).
 - El Formulario y las validaciones empecé a hacerlo con los ReactiveFormsModule pero no he conseguido darle el comportamiento que yo quería, cosa que si he logrado (más o menos) de otra manera que me parece un poco menos limpia, en el html. Tambíen lo he dejado para el final y no podía seguir peleándome. No me he quedado muy contento con eso.
 - No he podido controlar por falta de tiempo: a la hora de crear un usuario, cuando se ingresa un email o un documento identificativo que ya existe en la BBDD el programa hace lo que pide el ejercicio, pero al editar un usuario no se puede a no ser que se cambie el Dni o el Email, y creo que esto se debería controlar.
 - Esto último lo pregunto al usuario con un confirm. Me hubiera gustado hacerlo con un modal de bootstrap.
