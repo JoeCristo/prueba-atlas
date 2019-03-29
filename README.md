@@ -1,19 +1,3 @@
-Prueba Atlas
-==================
-
-Lo primero es agradecer la oportunidad brindada, para mi ha sido un reto ya que nunca había hecho nada con Angular u otro Framework de Javascript. 
-
-Me he permitido hacer una pantalla más de la que pide el ejercicio, para listar a los usuarios. También tiene la función de borrar, por lo que he hecho un CRUD completo.
-
-No hay pruebas unitarias. En la parte Backend creo que podría haber hecho alguna, pero con Angular no lo he hecho nunca. El tiempo no me ha dado para intentarlo.
-
-Os adjunto por aquí un video de demostración de la aplicación funcionando. 
-
-La prueba la podéis descargar de -> 
-
-
-* Notas:
-
 BACKEND
 ==================
 
@@ -41,9 +25,9 @@ La parte Frontend, por otro lado, me ha hecho sudar. Hay cosas que me hubiera gu
 - No va la carpeta node_modules.
 - He utilizado una biblioteca para una paginación en el listado de usuarios (instalar con npm install ngx-pagination --save).
 - El Formulario y las validaciones empecé a hacerlo con los ReactiveFormsModule pero no he conseguido darle el comportamiento que yo quería, cosa que si he logrado (más o menos) de otra manera que me parece un poco menos limpia, en el html. Tambíen lo he dejado para el final y no podía seguir peleándome. No me he quedado muy contento con eso.
-- No he podido controlar por falta de tiempo: a la hora de crear un usuario, cuando se ingresa un email o un documento identificativo que ya existe en la BBDD el programa hace lo que pide el ejercicio, pero al editar un usuario no se puede a no ser que se cambie el Dni o el Email, y creo que esto se debería controlar.
-- Esto último lo pregunto al usuario con un confirm. Me hubiera gustado hacerlo con un modal de bootstrap.
+- No he podido controlar por falta de tiempo: a la hora de crear un usuario, cuando se ingresa un Email o un Documento identificativo que ya existe en la BBDD el programa hace lo que pide el ejercicio, pero al editar un usuario no se puede a no ser que se cambie el Dni o el Email, y creo que esto se debería controlar.
+- Esto último lo pregunto al usuario con un confirm. Me hubiera gustado hacerlo con un modal.
 
 
-Por lo demás estoy contento por lo aprendido y voy seguir haciéndolo, por supuesto!.
+
 
