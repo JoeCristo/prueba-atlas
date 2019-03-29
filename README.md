@@ -9,7 +9,7 @@ No hay pruebas unitarias. En la parte Backend creo que podría haber hecho algun
 
 Os adjunto por aquí un video de demostración de la aplicación funcionando. 
 
-La prueba la podéis bajar de -> 
+La prueba la podéis descargar de -> 
 
 
 * Notas:
